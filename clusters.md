@@ -1,0 +1,8 @@
+ - UI/UX Design & Development
+ - Web Development
+ - Application Development
+ - Server/Cloud Development 
+ - Mobile App Development (Java, Swift, React Native)
+ - DevOps/Automation 
+ - Production Support 
+ - Software Project Management 
