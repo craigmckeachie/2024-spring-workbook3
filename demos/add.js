@@ -1,8 +1,4 @@
 //number 1 and number 2 are function parameters
-function log(value) {
-    
-}
-
 function add(number1, number2) {
   var result = number1 + number2;
   console.log(result);
