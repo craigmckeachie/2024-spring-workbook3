@@ -8,3 +8,6 @@ let msg = "Student: " + name + " (age: " + age + ")";
 
 let msg2 = `Student: ${name} (age: ${age})`;
 console.log(msg2);
+
+
+"Your first name is Julien and your last name is Ilboudo."
