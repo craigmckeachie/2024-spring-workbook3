@@ -42,13 +42,29 @@
             <input type="radio" name="under25" id="under25Yes" />
             <label for="under25Yes">Yes</label>
           </fieldset>
-          <button type="button">Estimate Total Cost</button>
-          <ul class="no-bullets">
-            <li>Car rental: <span>xxx.xx</span></li>
-            <li>Options: <span>xxx.xx</span></li>
-            <li>Under 25 surcharge: <span>xxx.xx</span></li>
-            <li>Total Due: <span>xxx.xx</span></li>
-          </ul>
+          <button type="button" id="estimateButton">Estimate Total Cost</button>
+          <table class="totals">
+            <tbody>
+              <tr>
+                <td>Car rental:</td>
+                <td id="carRentalTotalTD">xxx.xx</td>
+              </tr>
+              <tr>
+                <td>Options:</td>
+                <td id="optionsTotalTD">xx.xx</td>
+              </tr>
+              <tr>
+                <td>Under 25 surcharge:</td>
+                <td id="under25TotalTD">xx.xx</td>
+              </tr>
+            </tbody>
+            <tfoot>
+              <tr>
+                <td>Total due:</td>
+                <td>xxx.xx</td>
+              </tr>
+            </tfoot>
+          </table>
         </form>
       </article>
     </main>
