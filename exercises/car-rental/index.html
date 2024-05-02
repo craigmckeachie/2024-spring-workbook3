@@ -61,13 +61,41 @@
             <tfoot>
               <tr>
                 <td>Total due:</td>
-                <td>xxx.xx</td>
+                <td id="totalTD">xxx.xx</td>
               </tr>
             </tfoot>
           </table>
         </form>
       </article>
     </main>
+
+    <script>
+      "use script";
+      window.onload = function init() {
+        const pickupDateInput = document.getElementById("pickupDateInput");
+        const tollTagCheckbox = document.getElementById("tollTagCheckbox");
+        const under25Yes = document.getElementById("under25Yes");
+        const under25No = document.getElementById("under25No");
+        const estimateButton = document.getElementById("estimateButton");
+        estimateButton.onclick = estimate;
+
+        function estimate() {
+          if (tollTagCheckbox.checked) {
+            console.log("checked");
+          } else {
+            console.log("not checked");
+          }
+
+          if (under25Yes.checked) {
+            console.log("Yes");
+          }
+
+          if (under25No.checked) {
+            console.log("No");
+          }
+        }
+      };
+    </script>
     <!-- <script
       src="https://dohliam.github.io/dropin-minimal-css/switcher.js"
       type="text/javascript"
