@@ -70,31 +70,41 @@
     </main>
 
     <script>
-      "use script";
-      window.onload = function init() {
-        const pickupDateInput = document.getElementById("pickupDateInput");
-        const tollTagCheckbox = document.getElementById("tollTagCheckbox");
-        const under25Yes = document.getElementById("under25Yes");
-        const under25No = document.getElementById("under25No");
-        const estimateButton = document.getElementById("estimateButton");
+      "use strict";
+      //this function will run after the page loads
+      //in it we usually associate functions with the events that happen on html elements in the page
+      function init() {
+        // get the html element into a variable
+        // the variable holds an object which represents the html that has the specified id
+        let estimateButton = document.getElementById("estimateButton");
+        //associates the clicking of the button with a function
         estimateButton.onclick = estimate;
+      }
 
-        function estimate() {
-          if (tollTagCheckbox.checked) {
-            console.log("checked");
-          } else {
-            console.log("not checked");
-          }
+      //wait for the page to load and then run this function (init)
+      //why? because if the page hasn't loaded the html elments I need might not be there
+      window.onload = init;
 
-          if (under25Yes.checked) {
-            console.log("Yes");
-          }
+      function estimate() {
+        // get the html elements we need to do the estimate/calculation into variables
+        // the variables hold an object which represents the html that has the specified id
+        const numberOfDaysInput = document.getElementById("numberOfDaysInput");
+        const tollTagCheckbox = document.getElementById("tollTagCheckbox");
+        const gpsCheckbox = document.getElementById("gpsCheckbox");
+        const roadsideCheckbox = document.getElementById("roadsideCheckbox");
+        const under25No = document.getElementById("under25No");
+        const under25Yes = document.getElementById("under25Yes");
 
-          if (under25No.checked) {
-            console.log("No");
-          }
-        }
-      };
+        // get the html elements we need to display the results of our estimate/calculation
+        const carRentalTotalTD = document.getElementById("carRentalTotalTD");
+        const optionsTotalTD = document.getElementById("optionsTotalTD");
+        const under25TotalTD = document.getElementById("under25TotalTD");
+        const totalTD = document.getElementById("totalTD");
+
+        //verifies that this function is called when we click the estimate button
+        //we will remove this later but it proves we correctly did our job in the init function
+        console.log(`estimate`);
+      }
     </script>
     <!-- <script
       src="https://dohliam.github.io/dropin-minimal-css/switcher.js"
