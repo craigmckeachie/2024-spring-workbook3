@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Radio Demo</title>
+  </head>
+  <body>
+    <main>
+      <fieldset class="radio-group">
+        <legend>Insurance Types</legend>
+        <div>
+          <input type="radio" name="policyType" id="autoRadio" />
+          <label for="autoRadio">Auto</label>
+        </div>
+        <div>
+          <input type="radio" name="policyType" id="homeRadio" />
+          <label for="homeRadio">Home</label>
+        </div>
+        <div>
+          <input type="radio" name="policyType" id="lifeRadio" />
+          <label for="lifeRadio">Life</label>
+        </div>
+        <button id="saveButton">Save</button>
+      </fieldset>
+    </main>
+    <script>
+      //get the html elements
+      const autoRadio = document.getElementById("autoRadio");
+      const homeRadio = document.getElementById("homeRadio");
+      const lifeRadio = document.getElementById("lifeRadio");
+      const saveButton = document.getElementById("saveButton");
+
+      //functions to handle events
+      function save() {
+        console.log("Auto: " + autoRadio.checked);
+        console.log("Home: " + homeRadio.checked);
+        console.log("Life: " + lifeRadio.checked);
+      }
+
+      //wire-up functions to events
+      window.onload = function init() {
+        // saveButton.onclick = save;
+        autoRadio.onchange = save;
+      };
+    </script>
+  </body>
+</html>
