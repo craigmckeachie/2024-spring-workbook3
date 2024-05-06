@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ice Cream</title>
+
+    <!-- Centered viewport -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.classless.min.css"
+    />
+  </head>
+  <body>
+    <main>
+      <h1>Ice Cream</h1>
+      <form style="width: 25rem">
+        <label for="numberOfScoopsInput">Number of Scoops</label>
+        <input type="number" id="numberOfScoopsInput" value="4" />
+
+        <fieldset>
+          <legend></legend>
+          <input type="radio" name="iceCreamCone" id="coneInput" />
+          <label for="coneInput">Cone</label>
+          <input type="radio" name="iceCreamCup" id="cupInput" />
+          <label for="cupInput">Cup</label>
+        </fieldset>
+
+        <fieldset style="display: none;">
+          <legend>Toppings</legend>
+          <label for="toppingsCheckbox">
+            <input type="checkbox" id="toppingsCheckbox" />
+            Sprinkles ($.50)
+          </label>
+          <label for="whippedCreamCheckbox">
+            <input type="checkbox" id="whippedCreamCheckbox" />
+            Whipped Cream ($0.25)
+          </label>
+          <label for="hotFudgeCheckbox">
+            <input type="checkbox" id="hotFudgeCheckbox" />
+            Hot Fudge ($1.25)
+          </label>
+          <label for="cherryCheckbox">
+            <input type="checkbox" id="cherryCheckbox" />
+            Cherry ($0.25)
+          </label>
+        </fieldset>
+
+        <fieldset>
+          <button type="button" id="submitOrderButton">Submit Order</button>
+          <table class="totals">
+            <tbody>
+              <tr>
+                <td>Base Price:</td>
+                <td id="basePriceInput">xxx.xx</td>
+              </tr>
+              <tr>
+                <td>Tax:</td>
+                <td id="taxInput">xx.xx</td>
+              </tr>
+              <tr>
+                <td>Total Due:</td>
+                <td id="totalDueInput">xx.xx</td>
+              </tr>
+            </tbody>
+          </table>
+        </fieldset>
+      </form>
+    </main>
+
+    <footer></footer>
+    <script src="scripts/main.js"></script>
+  </body>
+</html>
