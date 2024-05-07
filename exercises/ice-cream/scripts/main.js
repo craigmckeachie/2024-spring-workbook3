@@ -25,6 +25,7 @@ function submitOrder() {
   //the basePriceTD holds an object like the one shown below which represents this html:
   //<td id="basePriceTD">xxx.xx</td>
   //   const basePriceTD = {
+  //     id: "basePriceTD"
   //     innerText: "xxx.xx",
   //   };
 
@@ -37,6 +38,14 @@ function submitOrder() {
   let basePrice = numberOfScoops * scoopCost;
   basePriceTD.innerText = "$" + basePrice.toFixed(2);
   totalDueTD.innerText = "$" + basePrice.toFixed(2);
+
+  let console = {
+    log: function(){
+
+    }
+  }
+  console.log()
+
 }
 
 //run this function after the window has loaded
